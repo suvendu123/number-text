@@ -1,5 +1,6 @@
 package com.cleancode.number;
 
+import static com.cleancode.number.NumberConstant.FINAL_FORMAT;
 import com.cleancode.number.converter.HundredConverter;
 import com.cleancode.number.converter.SingleDigitConverter;
 import com.cleancode.number.converter.ThousandConverter;
@@ -20,8 +21,9 @@ public class NumberTextGenerator {
 	}
 
 	public String generateText(NumberDetails details) {
-		return String.format("%s %s %s %s", thousandConverter.convert(details), hundredConverter.convert(details),
+		return String.format(FINAL_FORMAT, thousandConverter.convert(details), hundredConverter.convert(details),
 				twoDigit.convert(details), singleDigit.convert(details));
 	}
-
+	
+	
 }
