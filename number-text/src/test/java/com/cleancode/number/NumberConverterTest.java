@@ -38,6 +38,11 @@ public class NumberConverterTest {
     public void should_return_twenty() {
         assertEquals("TWENTY", converter.convert(20));
     }
+    
+    @Test
+    public void should_return_nineteen() {
+        assertEquals("NINETEEN", converter.convert(19));
+    }
    
  
 }
