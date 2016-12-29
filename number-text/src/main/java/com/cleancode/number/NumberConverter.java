@@ -9,6 +9,9 @@ public class NumberConverter {
     }
 
     public String convert(int number) {
+        if(number == 20){
+            return "TWENTY";
+        }
         return number == 10 ? "TEN" : singleDigit.convert(number);
 
     }
