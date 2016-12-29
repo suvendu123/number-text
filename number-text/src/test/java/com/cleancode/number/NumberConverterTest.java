@@ -28,6 +28,12 @@ public class NumberConverterTest {
     public void should_return_nine() {
         assertEquals("NINE", converter.convert(9));
     }
+    
+    @Test
+    public void should_return_ten() {
+        assertEquals("TEN", converter.convert(10));
+    }
+   
    
  
 }
