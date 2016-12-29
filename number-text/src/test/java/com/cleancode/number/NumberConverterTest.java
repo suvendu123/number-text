@@ -43,6 +43,11 @@ public class NumberConverterTest {
     public void should_return_nineteen() {
         assertEquals("NINETEEN", converter.convert(19));
     }
+    
+    @Test
+    public void should_return_ninety_five() {
+        assertEquals("NINETY FIVE", converter.convert(95));
+    }
    
  
 }
