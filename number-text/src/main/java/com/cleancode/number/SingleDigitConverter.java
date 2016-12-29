@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SingleDigitConverter implements Converter {
     
-    private List<String> singleDigitText = asList("ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE");
+    private List<String> singleDigitText = asList("", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE");
 
     @Override
     public String convert(NumberDetails numberDetails) {
