@@ -2,11 +2,10 @@ package com.cleancode.number;
 
 public class NumberConverter {
 
+    private String[] singleDigitText = { "ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE" };
+
     public String convert(int number) {
-        if(number == 9) {
-            return "NINE";
-        }
-        return number == 6 ? "SIX" : "ONE";
+        return singleDigitText[number];
     }
 
 }
