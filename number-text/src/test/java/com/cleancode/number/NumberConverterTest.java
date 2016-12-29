@@ -54,5 +54,11 @@ public class NumberConverterTest {
         assertEquals("TWO HUNDRED NINETY FIVE", converter.convert(295));
         assertEquals("SIX HUNDRED SIXTY SIX", converter.convert(666));
     }
+    
+    @Test
+    public void should_return_above_thousand_and_above() {
+        assertEquals("ONE THOUSAND TWO HUNDRED NINETY FIVE", converter.convert(1295));
+        assertEquals("SIX THOUSAND SIX HUNDRED SIXTY SIX", converter.convert(6666));
+    }
  
 }
