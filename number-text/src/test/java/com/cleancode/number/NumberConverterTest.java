@@ -48,6 +48,11 @@ public class NumberConverterTest {
     public void should_return_ninety_five() {
         assertEquals("NINETY FIVE", converter.convert(95));
     }
-   
+    
+    @Test
+    public void should_return_above_Hundred_below_thousand() {
+        assertEquals("TWO HUNDRED NINETY FIVE", converter.convert(295));
+        assertEquals("SIX HUNDRED SIXTY SIX", converter.convert(666));
+    }
  
 }
