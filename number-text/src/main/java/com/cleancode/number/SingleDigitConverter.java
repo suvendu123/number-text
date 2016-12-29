@@ -13,4 +13,8 @@ public class SingleDigitConverter implements Converter {
 		return numberDetails.getTenthDigit() != 1 ? singleDigitText.get(numberDetails.getUnit()) : "";
 
 	}
+
+	public List<String> getSingleDigitText() {
+		return singleDigitText;
+	}
 }
