@@ -23,5 +23,10 @@ public class NumberConverterTest {
     public void should_return_six() {
         assertEquals("SIX", converter.convert(6));
     }
+    
+    @Test
+    public void should_return_nine() {
+        assertEquals("NINE", converter.convert(9));
+    }
 
 }
