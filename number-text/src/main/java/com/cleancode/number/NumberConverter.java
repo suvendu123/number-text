@@ -2,22 +2,17 @@ package com.cleancode.number;
 
 public class NumberConverter {
 
-    private SingleDigitConverter singleDigit;
-    private TwoDigitConverter twoDigit;
+  
+    private NumberTextGenerator generator;
 
     public NumberConverter() {
-        this.singleDigit = new SingleDigitConverter();
-        this.twoDigit = new TwoDigitConverter();
+        this.generator = new NumberTextGenerator();
     }
 
    
     public String convert(int number) {
-        if(95 == number){
-            return "NINETY FIVE";
-        }
-        NumberDetails details = new NumberDetails(number);
-        return details.isTwoDigit() ? twoDigit.convert(details) : singleDigit.convert(details);
-
+    	NumberDetails details = new NumberDetails(number);
+        return generator.generateText(details).trim();
     }
 
 }
