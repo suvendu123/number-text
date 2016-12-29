@@ -1,18 +1,16 @@
 package com.cleancode.number;
 
-import static java.util.Arrays.asList;
-import java.util.List;
-
 public class NumberConverter {
 
-    private List<String> singleDigitText = asList("ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN",
-            "EIGHT", "NINE");
+    private SingleDigitData singleDigit;
+
+    public NumberConverter() {
+        this.singleDigit = new SingleDigitData();
+    }
 
     public String convert(int number) {
-        if(number == 10){
-            return "TEN";
-        }
-        return singleDigitText.get(number++);
+        return number == 10 ? "TEN" : singleDigit.convert(number);
+
     }
 
 }
