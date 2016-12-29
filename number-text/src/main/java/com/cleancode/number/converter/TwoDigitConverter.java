@@ -1,7 +1,9 @@
-package com.cleancode.number;
+package com.cleancode.number.converter;
 
 import static java.util.Arrays.asList;
 import java.util.List;
+
+import com.cleancode.number.NumberDetails;
 
 public class TwoDigitConverter implements Converter {
     

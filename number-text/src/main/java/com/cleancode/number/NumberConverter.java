@@ -8,7 +8,6 @@ public class NumberConverter {
     public NumberConverter() {
         this.generator = new NumberTextGenerator();
     }
-
    
     public String convert(int number) {
     	NumberDetails details = new NumberDetails(number);

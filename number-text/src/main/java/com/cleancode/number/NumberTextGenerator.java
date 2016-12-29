@@ -1,5 +1,9 @@
 package com.cleancode.number;
 
+import com.cleancode.number.converter.HundredConverter;
+import com.cleancode.number.converter.SingleDigitConverter;
+import com.cleancode.number.converter.TwoDigitConverter;
+
 public class NumberTextGenerator {
 
 	private SingleDigitConverter singleDigit;
