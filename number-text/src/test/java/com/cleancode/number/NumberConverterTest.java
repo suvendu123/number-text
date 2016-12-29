@@ -34,6 +34,10 @@ public class NumberConverterTest {
         assertEquals("TEN", converter.convert(10));
     }
     
+    @Test
+    public void should_return_twenty() {
+        assertEquals("TWENTY", converter.convert(20));
+    }
    
  
 }
