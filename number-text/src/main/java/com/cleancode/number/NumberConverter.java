@@ -2,16 +2,17 @@ package com.cleancode.number;
 
 public class NumberConverter {
 
-    private SingleDigitData singleDigit;
-    private TwoDigitData twoDigit;
+    private SingleDigitConverter singleDigit;
+    private TwoDigitConverter twoDigit;
 
     public NumberConverter() {
-        this.singleDigit = new SingleDigitData();
-        this.twoDigit = new TwoDigitData();
+        this.singleDigit = new SingleDigitConverter();
+        this.twoDigit = new TwoDigitConverter();
     }
 
     public String convert(int number) {
-        return (number / 10) % 10 != 0 ? twoDigit.convert(number) : singleDigit.convert(number);
+        NumberDetails details = new NumberDetails(number);
+        return details.isTwoDigit() ? twoDigit.convert(details) : singleDigit.convert(details);
 
     }
 
