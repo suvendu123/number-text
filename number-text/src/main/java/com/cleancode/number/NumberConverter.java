@@ -1,7 +1,6 @@
 package com.cleancode.number;
 
 public class NumberConverter {
-
   
     private NumberTextGenerator generator;
 
