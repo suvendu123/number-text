@@ -2,32 +2,25 @@ package com.cleancode.number;
 
 public final class NumberDetails {
 
-	private final int thousandDigit;
-	private final int hundredDigit;
-	private final int tenthDigit;
-	private final int unit;
-
+	private final int number;
+	
 	public NumberDetails(int number) {
-		this.thousandDigit = number / 1000;
-		this.hundredDigit = (number / 100) % 10;
-		this.tenthDigit = (number / 10) % 10;
-		this.unit = number % 10;
+		this.number = number;
 	}
-
+	
 	public int getTenthDigit() {
-		return tenthDigit;
+		return (number / 10) % 10;
 	}
 
 	public int getUnit() {
-		return unit;
+		return number % 10;
 	}
 
 	public int getHundredDigit() {
-		return hundredDigit;
+		return (number / 100) % 10;
 	}
-
 	public int getThousandDigit() {
-		return thousandDigit;
+		return  number / 1000;
 	}
 
 }

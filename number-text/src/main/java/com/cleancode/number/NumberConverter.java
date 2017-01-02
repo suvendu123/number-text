@@ -2,33 +2,31 @@ package com.cleancode.number;
 
 import static com.cleancode.number.NumberConstant.FINAL_FORMAT;
 
-import com.cleancode.number.converter.Converter;
-import com.cleancode.number.converter.HundredConverter;
+import com.cleancode.number.converter.ThreeDigitConverter;
 import com.cleancode.number.converter.SingleDigitConverter;
-import com.cleancode.number.converter.ThousandConverter;
+import com.cleancode.number.converter.FourDigitConverter;
 import com.cleancode.number.converter.TwoDigitConverter;
 
-public class NumberConverter implements Converter{
+public class NumberConverter{
   
     private SingleDigitConverter singleDigit;
     private TwoDigitConverter twoDigit;
-    private HundredConverter hundredConverter;
-    private ThousandConverter thousandConverter;
+    private ThreeDigitConverter hundredConverter;
+    private FourDigitConverter thousandConverter;
 
     public NumberConverter() {
         this.singleDigit = new SingleDigitConverter();
         this.twoDigit = new TwoDigitConverter();
-        this.hundredConverter = new HundredConverter();
-        this.thousandConverter = new ThousandConverter();
+        this.hundredConverter = new ThreeDigitConverter();
+        this.thousandConverter = new FourDigitConverter();
     }
    
-    @Override
+
     public String convert(int number) {
     	NumberDetails details = new NumberDetails(number);
         return convert(details).trim();
     }
 
-    @Override
     public String convert(NumberDetails details) {
         return String.format(FINAL_FORMAT, thousandConverter.convert(details), hundredConverter.convert(details),
                 twoDigit.convert(details), singleDigit.convert(details));

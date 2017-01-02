@@ -5,7 +5,7 @@ import static com.cleancode.number.NumberConstant.SINGLE_DIGIT_TEXT;
 import static com.cleancode.number.NumberConstant.EMPTY_TEXT;
 import static com.cleancode.number.NumberConstant.HUNDRED;
 
-public class HundredConverter implements Converter {
+public class ThreeDigitConverter implements Converter {
 	
 	@Override
 	public String convert(NumberDetails details) {

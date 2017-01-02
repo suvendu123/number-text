@@ -6,8 +6,5 @@ import com.cleancode.number.NumberDetails;
 public interface Converter {
 
     String convert(NumberDetails numberDetails);
-
-    default String convert(int number) {
-        return EMPTY_TEXT;
-    }
+   
 }

@@ -5,11 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.cleancode.number.converter.Converter;
-
 public class NumberConverterTest {
 
-    private Converter converter;
+    private NumberConverter converter;
 
     @Before
     public void setUp() {
@@ -62,5 +60,6 @@ public class NumberConverterTest {
         assertEquals("ONE THOUSAND TWO HUNDRED NINETY FIVE", converter.convert(1295));
         assertEquals("SIX THOUSAND SIX HUNDRED SIXTY SIX", converter.convert(6666));
     }
- 
+    
+    
 }
